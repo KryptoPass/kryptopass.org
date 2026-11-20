@@ -1,0 +1,15 @@
+// The site is served as a Worker with static assets only: no server code.
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "kryptopass-org",
+	"compatibility_date": "2025-10-01",
+	"assets": {
+		"directory": "./dist",
+		"not_found_handling": "404-page"
+	},
+	"workers_dev": false,
+	"routes": [
+		{ "pattern": "kryptopass.org", "custom_domain": true },
+		{ "pattern": "www.kryptopass.org", "custom_domain": true }
+	]
+}
